@@ -1,0 +1,24 @@
+group 'online.pizzacrust'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    dependencies {
+        classpath files('build/libs/Incomer-1.0-SNAPSHOT.jar')
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'PizzaIncomer'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+}
+
+income {
+    lineCount = 1
+    incomePerCount = 1
+}
